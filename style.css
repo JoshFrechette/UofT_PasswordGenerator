@@ -1,0 +1,43 @@
+/* Main content formatting */
+
+body {
+    align-content: center;
+    background-color: #f2fafa;   
+}
+
+.container {
+    background-color: white;
+    padding: 30px 20px 30px 20px;
+    margin: 20px 20px 20px 20px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* Button formatting */
+
+#generate {
+    color: white;
+    background-color: #b80d07;
+    float: left;
+    font-size: 20px;
+    border-radius: 15px;
+    max-width: 450px;
+
+}
+
+#copy {
+    color: white;
+    background-color: #b8b6b6;
+    float: right;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+/* Text Formatting */
+
+h1, h2 {
+    font-family: "Helvetica", "Arial", sans-serif;
+}
