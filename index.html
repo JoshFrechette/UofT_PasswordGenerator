@@ -16,19 +16,33 @@
     </header>
 </div>
 <div class="container"> 
- 
+ <div class= "row">
+   <div class= "col-12">
     <h2>Generate a Password</h2>
     <hr>
+  </div>
+ </div>
+ <div class= "row">
+    <div class= "col-12">
     <textarea
       readonly
       id="password"
       placeholder="Your Secure Password" 
       ></textarea>
-    <hr>
-    <button id="generate" onclick="pwGen()">Generate Password</button>
-    <button id="copy" onclick="pwCopy()">
+     <hr>
+  </div>
+ </div>
+ <div class= "row">
+    <div class= "col-6">
+     <button id="generate" onclick="start()">Generate Password</button>
+    </div>
+    <div class= "col-6">
+     <button id="copy" onclick="pwCopy()">
       Copy to Clipboard
     </button>
+    </div>
+  </div>
+ </div>
 </div>
 <script src="script.js"></script>
   </body>

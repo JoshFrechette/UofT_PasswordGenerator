@@ -1,0 +1,61 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c1680\c19835\c100000;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{square\}}{\leveltext\leveltemplateid1\'01\uc0\u9642 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{square\}}{\leveltext\leveltemplateid101\'01\uc0\u9642 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww10800\viewh11060\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qc\partightenfactor0
+
+\f0\b\fs24 \cf0 PseudoCode for Assignment 3 - Password Generator\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b0 \cf0 \ul \ulc0 Parameters for the password\
+\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 \ulnone {\listtext	
+\f1 \uc0\u9642 
+\f0 	}Process starts with the \'93Generate Password\'94 button being pressed.\ul \
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 \ulnone {\listtext	
+\f1 \uc0\u9642 
+\f0 	}Password length must be between 8-128 characters\
+{\listtext	
+\f1 \uc0\u9642 
+\f0 	}User must choose whether password contains numeric characters, special characters, lowercase characters, and/or uppercase characters.\
+{\listtext	
+\f1 \uc0\u9642 
+\f0 	}For password to function, at least one of the previous options must be selected.\
+{\listtext	
+\f1 \uc0\u9642 
+\f0 	}Password generated must appear in the text box and the \'93Copy to Clipboard\'94 button must copy the password to the clipboard.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\ul Steps to for Assignment 3\
+\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls3\ilvl0\cf0 \ulnone {\listtext	1.	}User clicks button, initiates code to generate password\
+{\listtext	2.	}User must select a number between 8 and 128 for the length of the password. If password length is acceptable, proceed to next step. If it is not, repeat process until length chosen is acceptable.\
+{\listtext	3.	}User must confirm whether password will contain special characters or not.\
+{\listtext	4.	}User must confirm whether password will contain numbers or not.\
+{\listtext	5.	}User must confirm whether password will contain lowercase characters or not.\
+{\listtext	6.	}User must confirm whether password will contain uppercase characters or not.\
+{\listtext	7.	}Code must recognize whether at least one of the four previous options were chosen. If not, alert user and restart from step 3.\
+{\listtext	8.	}Generate password in text-box.\
+{\listtext	9.	}Press \'93Copy to Clipboard\'94 button to copy the password to the user\'92s clipboard.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\ul Notes\
+\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls4\ilvl0\cf0 \ulnone {\listtext	\uc0\u8226 	}When user decides on a character specification, it is \cf2 pushed\cf0  into an \cf2 array\cf0  with all the possible characters for the password generator to draw on.\
+{\listtext	\uc0\u8226 	}User must be \cf2 looped\cf0  back to step 2 and step 3 if \cf2 conditions\cf0  for each are not met.\
+{\listtext	\uc0\u8226 	}Generator code must draw \cf2 randomly\cf0  from the password character array.\ul \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \ulnone \
+\ul \
+}

@@ -1,0 +1,22 @@
+// Establishing first instance of Generated Password array to be filled by criteria
+// var passWord = [];
+
+// // Pool of acceptable, user chosen criteria to be added to the passWord array
+// var passwordPotentials = [];
+
+// // Not sure if I should make these variable arrays, or just variable spans (?)
+// // Special characters, if True, add to passwordPotentials array
+// var specChars = " ! # % &'()*+,-./:;<=>?@[\]^_`{|}~";
+
+// // Numeric characters, if True, add to passwordPotentials array
+// var numChars = "1 2 3 4 5 6 7 8 9";
+
+// // Lowercase characters, if True, add to passwordPotentials array
+// var lowChars = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
+
+// //Uppercase characters, if True, add to passwordPotentials array
+// var upChars = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
+
+// // Create variable for where password will appear in the HTML (This might have to have a "Write" constructor//move to the end of the code?)
+// var passswordText = document.getElementById("password");
+
