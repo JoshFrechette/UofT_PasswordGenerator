@@ -1,11 +1,17 @@
 //If linking .js file doesn't work, copy and paste to BOTTOM of .html
 
+//Global variables
+//Initially Empty array holding the character conditions chosen by the user
+var pwPotential = [];
+//Where the 
+var pwCreated = [];
+
 
 function pwGen(pwLength) {// Pressing "Generate Password" button launches the password generator
 //First User ask for password length (numeric value)
 
     pwLength = prompt("How many characters would you like your password to be?")    
-
+    console.log(pwLength);
     if (pwLength >= 8 && pwLength <= 128) { //constrain the length of the password to between 8 and 128
        // arr.length = pwLength; //if true, make the array the inputed length
         return true
@@ -62,6 +68,7 @@ function start(){
             } 
         } else if(step===2) {
             if (specChars()===true) {
+                pwPotential.push ("!", "#", "%", "&","(",")", "*", "+", "-" , ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", ",", "{", "|", "}", "~");
                 step = 3
             }
             else {
@@ -69,6 +76,7 @@ function start(){
             }
         } else if(step===3) {
            if (numChars()===true) {
+               pwPotential.push ("1", "2", "3", "4", "5", "6", "7", "8", "9");
                step = 4
            }
            else {
@@ -76,6 +84,7 @@ function start(){
            }
         } else if(step===4) {
             if (lowChars()===true) {
+                pwPotential.push ("a", "b", "c","d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
                 step = 5
             }
             else {
@@ -83,6 +92,7 @@ function start(){
             }
         } else if(step===5) {
             if (upChars()===true) {
+                pwPotential.push ("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M","N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
                 step = 6
             }
             else {
@@ -90,18 +100,22 @@ function start(){
             }
         } else if(step===6) {
             passwordHasNotBeenChoosen != true;
+
             alert("Print password");
 }
 
     //code
 }
 }
-//Initially Empty array 
-var pwPotential; []
 
+
+//If array is empty, return to step 2
+//If pwPotential.length <= 1; alert user, return to step 2
+
+/*
 function pwGenerate() {
     if (specChars = true) {
-        pwPotential.push (" ! # % &'()*+,-./:;<=>?@[\]^_`{|}~");
+        pwPotential.push ("!", "#", "%", "&","(",")", "*", "+", "-" , ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", ",", "{", "|", "}", "~");
     }
     if (numChars = true) {
         pwPotential.push ("1 2 3 4 5 6 7 8 9");
@@ -113,8 +127,9 @@ function pwGenerate() {
         pwPotential.push ("A B C D E F G H I J K L M N O P Q R S T U V W X Y Z");
     }
 }
+*/
 
-
+console.log(pwPotential);
 
 
 /*
@@ -158,7 +173,7 @@ function pwCopy() {
     var copyText = document.getElementById("password");
 
     copyText.querySelector();
-     document.execCommand("copy");
+    document.execCommand("copy");
 
      alert("Your password "+ copyText.value + "was copied to your clipboard.");
 }
