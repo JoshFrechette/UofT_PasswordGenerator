@@ -1,4 +1,11 @@
 /* Main content formatting */
+#password {
+    
+    width: 900px;
+    height: 50px;
+    max-width: fit-content;
+    max-inline-size: 100%;
+}
 
 body {
     align-content: center;

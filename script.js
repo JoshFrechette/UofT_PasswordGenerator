@@ -3,7 +3,7 @@
 //Global variables
 //Initially Empty array holding the character conditions chosen by the user
 var pwPotential = [];
-//Where the 
+//Where the password will be born from, once turned into a string
 var pwCreated = [];
 
 
@@ -27,6 +27,10 @@ function specChars(pwSpecChars) {
 
     if (pwSpecChars) { 
         return true
+    }
+
+    if (pwSpecChars === false || pwNumChars === false || pwLowChars === false || pwUPChars === false) {
+        return false
     }
 }
 
@@ -57,6 +61,8 @@ function lowChars(pwLowChars) {
 
 
 
+
+
 function start(){
     console.log("started")
     var step = 1;
@@ -68,7 +74,8 @@ function start(){
             } 
         } else if(step===2) {
             if (specChars()===true) {
-                pwPotential.push ("!", "#", "%", "&","(",")", "*", "+", "-" , ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", ",", "{", "|", "}", "~");
+                pwPotential.push("!", "#", "%", "&","(",")", "*", "+", "-" , ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", ",", "{", "|", "}", "~");
+                console.log(pwPotential);
                 step = 3
             }
             else {
@@ -76,7 +83,8 @@ function start(){
             }
         } else if(step===3) {
            if (numChars()===true) {
-               pwPotential.push ("1", "2", "3", "4", "5", "6", "7", "8", "9");
+               console.log(pwPotential);
+               pwPotential.push("0","1", "2", "3", "4", "5", "6", "7", "8", "9");
                step = 4
            }
            else {
@@ -84,7 +92,8 @@ function start(){
            }
         } else if(step===4) {
             if (lowChars()===true) {
-                pwPotential.push ("a", "b", "c","d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
+                pwPotential.push("a", "b", "c","d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
+                console.log(pwPotential);
                 step = 5
             }
             else {
@@ -92,20 +101,27 @@ function start(){
             }
         } else if(step===5) {
             if (upChars()===true) {
-                pwPotential.push ("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M","N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
+                pwPotential.push("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M","N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
+                console.log(pwPotential);
                 step = 6
             }
             else {
                  step = 6
             }
         } else if(step===6) {
-            passwordHasNotBeenChoosen != true;
-
-            alert("Print password");
+            if (pwPotential.length <= 1) {
+                alert("Password must contain at least one character set.")
+                return false
+                step = 2
+            }
+            else {
+                passwordHasNotBeenChoosen != true;
+            }
+            
 }
 
-    //code
 }
+return pwPotential([]);
 }
 
 
@@ -129,7 +145,7 @@ function pwGenerate() {
 }
 */
 
-console.log(pwPotential);
+
 
 
 /*
