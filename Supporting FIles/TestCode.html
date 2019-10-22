@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Code Test</title>
+  </head>
+  <body>
+<p></p>
+<script>
+pwLength = 30;
+    // Create an array with the total of all possible characters
+pwPotential = ["!", "#", "%", "&","(",")", "*", "+", "-" , ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", ",", "{", "|", "}", "~","0","1", "2", "3", "4", "5", "6", "7", "8", "9","a", "b", "c","d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" ,"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M","N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+pwCreated = [];//create an empty array
+function pwCreated(){
+for (i = 0; i < pwLength; i++) {
+pwCreated += pwPotential[Math.floor(Math.random() * pwPotential.length) -1];// Picks random characters from the pwPotential array
+console.log(pwCreated + " is the pwCreated");
+}
+}
+</script>
+  </body>
+</html>

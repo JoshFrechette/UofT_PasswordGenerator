@@ -1,27 +1,26 @@
+//orginal script to switch to
+
 //If linking .js file doesn't work, copy and paste to BOTTOM of .html
 
 //Global variables
 
 var pwPotential = [];//Initially Empty array holding the character conditions chosen by the user
+var pwCreated = []; // Empty array to hold the password
+//Fields for the possible character fields
+var password = ""; //Empty string to print in text field
+var specChars = "!@#$%^~`&*()-=_+|}{?<>";
+var numChars = "1234567890";
+var lowChars = "abcedfghijklmnopqrstuvwxyz";
+var upChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-var pwCreated = [];
-
-var pwLength = 30; // User chosen length of the password
 
 
-function pwGen(pwLength) {// Pressing "Generate Password" button launches the password generator
+// Pressing "Generate Password" button launches the password generator
 //First User ask for password length (numeric value)
+ 
+    
+     
 
-    pwLength = prompt("How many characters would you like your password to be?")    
-    console.log("Password length will be " + pwLength + " characters long");
-    if (pwLength >= 8 && pwLength <= 128) { //constrain the length of the password to between 8 and 128
-       // arr.length = pwLength; //if true, make the array the inputed length
-        return true
-    } else {
-        alert("Password must be between 8 and 128 characters long");
-        return false
-    }    
-}
 
 function specChars(pwSpecChars) {
     pwSpecChars = confirm("Click OK to confirm including special characters.");
@@ -60,21 +59,24 @@ function upChars(pwUpChars) {
     }
  }
 */
-
-
-
-
-
-
 function start(){ //On click event to generate the password
     console.log("started")
+    var pwLength = 0; // User chosen length of the password
     var step = 1;
     var passwordHasNotBeenChoosen = true;
     while(passwordHasNotBeenChoosen){
         if(step===1){
-            if (pwGen()===true) {
+            pwLength = prompt("How long would you like your password to be?") 
+            console.log("Password length will be " + pwLength + " characters long");  
+            if (pwLength <= 8 && pwLength >= 128) { //constrain the length of the password to between 8 and 128
+                // arr.length = pwLength; //if true, make the array the inputed length
+                alert("Password must be between 8 and 128 characters long");   
+                step = 1
+             } else {                              
+                (pwGen()===true)
                 step = 2
-            } 
+             }   
+           
         } else if(step===2) {
             if (specChars()===true) {
                 pwPotential.push("!", "#", "%", "&","(",")", "*", "+", "-" , ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", ",", "{", "|", "}", "~");
@@ -85,9 +87,9 @@ function start(){ //On click event to generate the password
                 step = 3
             }
         } else if(step===3) {
-           if (numChars()===true) {
-               console.log(pwPotential);
+           if (numChars()===true) {           
                pwPotential.push("0","1", "2", "3", "4", "5", "6", "7", "8", "9");
+               console.log(pwPotential);
                step = 4
            }
            else {
